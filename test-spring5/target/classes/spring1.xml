@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- byName 根据属性的名称自动装配  属性的名字与bean id名称完全一致-->
+<!-- byType 根据属性的类型自动装配  根据属性的类型在IOC容器中查找对象自动装配  注意的是不能配置多个部门对象 否则不知道装配哪一个-->
+    <bean id="empEntity" class="com.me.entity.EmpEntity" autowire="byName">
+    </bean>
+
+    <bean id="deptEntity" class="com.me.entity.DeptEntity">
+        <property name="department" value="我的test"></property>
+    </bean>
+
+
+</beans>
